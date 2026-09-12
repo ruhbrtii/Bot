@@ -4,7 +4,7 @@ from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from aiogram.client.default import DefaultBotProperties
 
-===== CONFIG =====
+# ===== CONFIG =====
 CRYPTO_TOKEN = "633267:AABuXtRuRijonfHf2Ewf7QjuSe53gpUdUmg"
 BOT_TOKEN    = "8625668503:AAFWioq56KwTZZd_aVNRhJKSX72qc7glYJU"
 CRYPTO_API   = "https://pay.crypt.bot/api"
