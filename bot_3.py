@@ -11,7 +11,7 @@ CRYPTO_API   = "https://pay.crypt.bot/api"
 ASSET        = "USDT"
 LOG_CHAT     = -1003913074849
 
-===== DB =====
+# ===== DB =====
 _write_lock = asyncio.Lock()
 
 def db():
@@ -26,8 +26,7 @@ def db():
         created_at TEXT DEFAULT (datetime('now')))""")
     con.commit()
     return con
-
-===== CRYPTO API =====
+ # ===== CRYPTO API =====
 async def api(method, **kw):
     async with aiohttp.ClientSession() as s:
         async with s.get(f"{CRYPTO_API}/{method}", params=kw,
@@ -55,7 +54,7 @@ async def add_balance(uid, amount):
         finally:
             con.close()
 
-===== BOT =====
+# ===== BOT =====
 router = Router()
 
 router.message(Command("баланс"))
